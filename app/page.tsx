@@ -48,7 +48,7 @@ export default function Page() {
       {loading && <p>불러오는 중...</p>}
       {error && <p style={{ color: "red" }}>{error}</p>}
 
-      {priceData.length > 0 && (
+      {priceData && priceData.length > 0 && (
         <>
           <h2>10년 주가 추이</h2>
           <ResponsiveContainer width="100%" height={300}>
@@ -63,7 +63,7 @@ export default function Page() {
         </>
       )}
 
-      {incomeData.length > 0 && (
+      {incomeData && incomeData.length > 0 && (
         <>
           <h2 style={{ marginTop: "2rem" }}>매출 & 순이익 추이</h2>
           <ResponsiveContainer width="100%" height={300}>
